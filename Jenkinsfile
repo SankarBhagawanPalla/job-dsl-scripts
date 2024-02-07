@@ -9,5 +9,12 @@ pipeline {
         }
       }
     }
+    stage('next') {
+      steps {
+        script {
+          echo 'Hello Shankar!'
+        }
+      }
+    }
   }
 }
