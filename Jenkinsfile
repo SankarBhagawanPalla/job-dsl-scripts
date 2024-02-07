@@ -16,5 +16,13 @@ pipeline {
         }
       }
     }
+    stage('read file') {
+      steps {
+        script {
+          def fileContent = readFile 'example.txt'
+          echo "File content: ${fileContent}"
+        }
+      }
+    }
   }
 }
