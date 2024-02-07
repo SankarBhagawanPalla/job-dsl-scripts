@@ -24,5 +24,13 @@ pipeline {
         }
       }
     }
+    stage('execute job dsl script') {
+      steps {
+        script {
+          def jobDSLScript = readFile 'jobs.groovy'
+          jobDsl scriptText: jobDSLScript
+        }
+      }
+    }
   }
 }
